@@ -108,3 +108,50 @@ function nameList(array){
 }
 
 nameList(["Alice", "Bob", "Charlie"]);
+
+
+/*
+* Generates an attendee badge given a name and a role
+* @param {string} name - name of the employee
+* @param {string} role
+* @returns {string} A formatted badge string
+*/
+
+function generateBadge(name, role) {
+	// generate our string
+	let badge = `Name: ${name}, Role: ${role}`;
+	return badge; 
+	// return string
+}
+
+function calculateTotalCost(numAttendees, price, discount = 0.9) {
+	let total = price * numAttendees;
+	if (numAttendees > 100) {
+		total = total * discount;
+	}
+	return total;
+}
+
+function isValidEmail(email) {
+	email = String(email);
+	return (email.includes("@") && email.includes("."));
+}
+
+function main() {
+	console.log("--- Generate Badge ---");
+	console.log(generateBadge("Bob", "Builder"));
+	console.log();
+	
+	console.log("--- Calculate Total Cost ---");
+	console.log(`numAttendees: 9512, price: $5000 -- $${calculateTotalCost(9512, 5000)}`);
+	console.log(`numAttendees: 5, price: $5000 -- $${calculateTotalCost(5, 5000)}`);
+
+	const emails = ["mesoogood@launchcode.js", "testyMcTesterface", "example.com"];
+
+	for (const email of emails) {
+		// write output of isValidEmail for each email address
+		console.log(`${email}: ${isValidEmail(email)}`);
+	}
+}
+
+main();
