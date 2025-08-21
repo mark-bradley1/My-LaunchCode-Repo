@@ -167,7 +167,7 @@ class Clothing {
     }
 
     describe() {
-        this.isDirty ? console.log(`The ${this.name} is ${this.color} and made of ${this.material}. It is dirty.`) : console.log (`The ${this.name} is ${this.color} and made of ${this.material}. It is clean.`);
+        console.log(`The ${this.name} is ${this.color} and made of ${this.material}. It is ${this.isDirty ? "dirty" : "clean"}.`); // ternary operator to print weather the clothing is dirty or clean in one line
         // if (this.isDirty) {
         //     console.log (`The ${this.name} is ${this.color} and made of ${this.material}. It is dirty.`);
         // } else {
