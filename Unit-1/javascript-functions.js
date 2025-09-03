@@ -85,7 +85,7 @@ greet('Charlie');
 // Script 2:
 function sumCalc(num1, num2){
    let sum = num1 + num2;
-   console.log(`The sum of ${num1} + ${num2} is: `);
+   console.log(`The sum of ${num1} + ${num2} is: ${sum}`);
    return sum;
 } // How can I return the sum on the same line as the console.log statement? 
 
@@ -94,9 +94,11 @@ console.log(sumCalc(5, 10));
 // Script 3:
 function prodCalc(num1, num2){
    let product = num1 * num2;
-   console.log(`The product of ${num1} and ${num2} is: `);
+   console.log(`The product of ${num1} and ${num2} is: ${product}`);
    return product;
 }
+
+module.exports = { greet };
 
 prodCalc(5, 10);
 
