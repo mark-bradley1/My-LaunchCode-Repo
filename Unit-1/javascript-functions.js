@@ -98,8 +98,6 @@ function prodCalc(num1, num2){
    return product;
 }
 
-module.exports = { greet };
-
 prodCalc(5, 10);
 
 // Script 4:
